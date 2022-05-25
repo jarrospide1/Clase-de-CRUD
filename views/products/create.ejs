@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {
+    pageTitle: 'Create Product',
+    }) %> 
+<body>
+    <h1>Crear Producto</h1>
+
+    <form action="/products" method="post" enctype="multipart/form-data">
+
+        <div>
+            <label for=""> Nombre del Producto </label>
+            <input type="text" name="productName">
+        </div>
+        <div>
+            <label for=""> Precio del Producto </label>
+            <input type="text" name="productPrice">
+        </div>
+        <div>
+            <label for=""> Subir imagen del Producto </label>
+            <input type="file" name="productImage">
+        </div>
+        <button type="submit"> Guardar </button>
+        
+    </form>
+</body>
+</html>

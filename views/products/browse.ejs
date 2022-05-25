@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {
+    pageTitle: 'Todos los Productos',
+    }) %> 
+<body>
+    <h1>Todos los productos</h1>
+
+    <ul>
+        <% for( let i = 0; i < productsList.length; i++ ) { %>
+        <li>
+            <h3><%= productsList[i].productName  %> </h3>
+            <p> <%= productsList[i].productPrice  %> </p>
+            <img src="/uploads/<%= productsList[i].productImage %> " alt="">
+            <a href="products/<%= productsList[i].id %> ">Ver mas</a>
+        </li>
+       <% } %>
+    </ul>
+
+
+</body>
+</html>

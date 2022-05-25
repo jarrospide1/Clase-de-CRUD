@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {
+    pageTitle: 'Home',
+    }) %> 
+<body>
+    <h2>Esta es la home</h2>
+
+    <ul>
+        <% for(let i = 0; i <listadoPelis.length; i++) { %>
+            <li>
+                <strong> <%= listadoPelis[i].name  %>  </strong>
+                <em> <%= listadoPelis[i].rating  %> </em>
+                <a href="/detail/<%= listadoPelis[i].id  %>"> ver detalle </a>
+            </li>
+        <% } %> 
+
+    </ul>
+</body>
+</html>
