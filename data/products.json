@@ -1,23 +1,13 @@
 [
  {
-  "id": "1", 
-  "productName": "remera blanca",
-  "productPrice": "200"
- },
- {
-  "id": "2",
-  "productName": "remera negra",
-  "productPrice": "150"
- },
- {
-  "id": "3",
-  "productName": "Pantalon de pana",
-  "productPrice": "300"
- },
- {
   "id": "4",
   "productName": "chaleco",
   "productPrice": "500",
   "productImage": "1653518186034_956448409_productImage.jpg"
+ },
+ {
+  "id": "5",
+  "productName": "pantalon skate",
+  "productPrice": "350"
  }
 ]

@@ -10,5 +10,10 @@
     <h1> Detalle del Producto: <%= product.productName %>  </h1>
     <p> <%= product.productPrice %> </p>
     <img src="/uploads/<%= product.productImage %>" alt="">
+    <a href="/products/edit/<%= product.id %> ">Editar producto</a>
+
+    <form action="/products/<%= product.id %>?_method=DELETE" method="post">
+        <button type="submit"> Borrar Producto </button>
+    </form>
 </body>
 </html>

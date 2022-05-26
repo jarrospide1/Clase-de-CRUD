@@ -28,8 +28,8 @@ const controller = {
             body: req.body,
             file: req.file
         })
-        return;*/
-
+        return;
+*/
         productsArray.push({
             productName : req.body.productName,
             productPrice : req.body.productPrice,
@@ -48,7 +48,8 @@ const controller = {
 
     edit: (req, res) => {
         const productId = req.params.id;
-        res.send('formulario para a editar el producto' + productId);
+        const product = productsArray.find(oneProduct => oneProduct.id === productId)
+        res.render('products/edit.ejs', { product });
     },
 
     update: (req, res) => {
@@ -57,8 +58,9 @@ const controller = {
     },
 
     delete: (req, res) => {
-        const productId = req.params.id;
-        res.send('vamos a borrar el producto ' + productId)
+        productsArrays = productsArray.filter(oneProduct => oneProduct.id !== req.params.id);
+        fs.writeFileSync(filePath, JSON.stringify(productsArrays, null, ' '))        
+        res.redirect('/products')
     },
 
 }

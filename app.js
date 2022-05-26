@@ -4,6 +4,8 @@ const express = require('express');
 // ejecuto la aplicación
 const app = express();
 
+const methodOverride = require('method-override')
+
 // levanto el servidor
 app.listen(3000, () => console.log('servidor corriendo en el puerto 3000'));
 
@@ -14,6 +16,7 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded( {extended: false} ));
 app.use(express.json())
 
+app.use(methodOverride('_method'))
 //Configuracion de archivos estaticos
 app.use(express.static(__dirname + '/public'));
 
